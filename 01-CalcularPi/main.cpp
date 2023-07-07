@@ -1,20 +1,23 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 
-int main()
-{
-float n=450000,i, signo=1;
-float pi=0;
+int main() {
+    double pi = 0.0;
+    int den = 1;
+    int signo = 1;
 
- for ( i = 1; i <= n; i+=2)
- {
-    pi=pi+signo*(4/i);
-    signo=-signo;
- }
- 
+    int i = 0;
+    int maxI = 1000000;
 
-cout<< "Valor de pi es igual a: "<< fixed << setprecision(6)<<  pi << endl;
+    while ( i < maxI ) {
+        pi += signo * (4.0 / den);
+        den += 2;
+        signo = -signo;
+        i++;
+    }
 
- return 0;
+    cout << "El valor aproximado de pi es: " << fixed << setprecision(6)<< pi << endl;
+
+    return 0;
 }

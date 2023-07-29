@@ -15,7 +15,7 @@ int main() {
 	// mientras la diferencia entre pi y el valor previo de pi 
 	// no sea lo suficientemente chica para tener la presicion 
 	// mencionada en el ejercicio, continuará ciclando
-	while (abs(pi - prev_pi) > 0.000001) { 
+	while (abs(pi - prev_pi) > 0.0000015) { 
 		prev_pi = pi;
 		pi += signo * (4.0 / i);
 		signo = -signo;
